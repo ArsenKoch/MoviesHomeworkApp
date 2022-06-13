@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MoviesHomeworkApp</string>
+    <string name="avengers_end_game">Avengers: End Game</string>
+    <string name="action_adventure_fantasy">Action,Adventure,Fantasy</string>
+    <string name="_13">13+</string>
+    <string name="_125_reviews">125 REVIEWS</string>
+    <string name="storyline">Storyline</string>
+    <string name="cast">Cast</string>
 </resources>
