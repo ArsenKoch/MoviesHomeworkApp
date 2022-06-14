@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/drawable/ic_path.xml" value="0.27" />
+        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/drawable/ic_star_icon.xml" value="0.27" />
+        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/drawable/ic_star_icon.xml" value="0.1435" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
       </map>

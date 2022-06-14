@@ -6,4 +6,9 @@
     <string name="_125_reviews">125 REVIEWS</string>
     <string name="storyline">Storyline</string>
     <string name="cast">Cast</string>
+    <string name="robert_downey_jr">Robert Downey Jr.</string>
+    <string name="chris_evans">Chris Evans</string>
+    <string name="mark_ruffalo">Mark Ruffalo</string>
+    <string name="chris_hemsworth">Chris Hemsworth</string>
+    <string name="back">Back</string>
 </resources>
