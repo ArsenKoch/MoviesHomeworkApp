@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background=" #191926"
+        android:background="@color/backgroundСolor"
         tools:context=".MainActivity">
 
         <ImageView
@@ -18,21 +19,17 @@
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:src="@drawable/orig"
-
-
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvMovieTitle"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/my_value"
             android:text="@string/avengers_end_game"
-            android:textColor="#ECECEC"
-            android:textSize="40sp"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/text_size_title"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
@@ -40,11 +37,11 @@
 
         <TextView
             android:id="@+id/tvMovieGenres"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
             android:text="@string/action_adventure_fantasy"
-            android:textColor="#FF3466"
-            android:textSize="14sp"
+            android:textColor="@color/genres"
+            android:textSize="@dimen/tv_textSize_max"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle" />
@@ -53,11 +50,10 @@
             android:id="@+id/tvAgeAudience"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/top_indentation_min"
             android:text="@string/_13"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_textSize_min"
             app:layout_constraintBottom_toBottomOf="@+id/tvMoviePoster"
             app:layout_constraintStart_toStartOf="@id/guidelineStart" />
 
@@ -65,7 +61,7 @@
             android:id="@+id/tvFirstStar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
@@ -74,7 +70,7 @@
             android:id="@+id/tvSecondStar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@+id/tvFirstStar"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
@@ -83,7 +79,7 @@
             android:id="@+id/tvThirdStar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@+id/tvSecondStar"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
@@ -92,7 +88,7 @@
             android:id="@+id/tvFourStar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@+id/tvThirdStar"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
@@ -101,7 +97,7 @@
             android:id="@+id/tvFiveStar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon_grey"
             app:layout_constraintStart_toEndOf="@+id/tvFourStar"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
@@ -110,11 +106,11 @@
             android:id="@+id/tvReviews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="@dimen/tv_textSize_min"
+            android:layout_marginTop="@dimen/top_indentation_actors"
             android:text="@string/_125_reviews"
-            android:textColor="#6D6D80"
-            android:textSize="14sp"
+            android:textColor="@color/greyReviews"
+            android:textSize="@dimen/tv_textSize_max"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/tvFiveStar"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
@@ -123,36 +119,36 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="@dimen/my_value"
+            android:layout_marginTop="@dimen/top_indentation_castAndStoryline"
             android:text="@string/storyline"
-            android:textColor="#ECECEC"
-            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_textSize_max"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvReviews" />
 
         <TextView
             android:id="@+id/tvMovieDescription"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/my_value"
             android:fontFamily="@font/roboto_light"
-            android:text="After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
-            android:textColor="#ECECEC"
-            android:textSize="14sp"
+            android:text="@string/titleName"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_textSize_max"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/tvCast"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/top_indentation_castAndStoryline"
             android:text="@string/cast"
-            android:textColor="#ECECEC"
-            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_textSize_max"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
@@ -163,23 +159,20 @@
             android:id="@+id/tvRobert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/top_indentation_max"
             android:src="@drawable/movie_3"
             app:layout_constraintEnd_toStartOf="@+id/tvChris"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@+id/tvCast" />
 
         <ImageView
             android:id="@+id/tvChris"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-
+            android:layout_marginStart="@dimen/top_indentation_min"
+            android:layout_marginTop="@dimen/top_indentation_max"
             android:src="@drawable/movie_2"
             app:layout_constraintEnd_toStartOf="@+id/tvMark"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tvRobert"
             app:layout_constraintTop_toBottomOf="@+id/tvCast" />
 
@@ -187,11 +180,10 @@
             android:id="@+id/tvMark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/top_indentation_min"
+            android:layout_marginTop="@dimen/top_indentation_max"
             android:src="@drawable/movie_1"
             app:layout_constraintEnd_toStartOf="@+id/tvHemsworth"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tvChris"
             app:layout_constraintTop_toBottomOf="@+id/tvCast" />
 
@@ -199,21 +191,21 @@
             android:id="@+id/tvHemsworth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/top_indentation_min"
+            android:layout_marginTop="@dimen/top_indentation_max"
             android:src="@drawable/movie"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toEndOf="@+id/tvMark"
             app:layout_constraintTop_toBottomOf="@+id/tvCast" />
 
         <TextView
             android:id="@+id/textRobertDowney"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_light"
             android:text="@string/robert_downey_jr"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="@dimen/tv_textSize_min"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tvRobert"
             app:layout_constraintStart_toStartOf="@id/tvRobert"
@@ -221,14 +213,14 @@
 
         <TextView
             android:id="@+id/textChrisEvans"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginStart="@dimen/top_indentation_min"
+            android:layout_marginTop="@dimen/top_indentation_actors"
             android:fontFamily="@font/roboto_light"
             android:text="@string/chris_evans"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="@dimen/tv_textSize_min"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tvChris"
             app:layout_constraintStart_toStartOf="@+id/tvChris"
@@ -236,41 +228,39 @@
 
         <TextView
             android:id="@+id/textMarkRuffalo"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginStart="@dimen/top_indentation_min"
+            android:layout_marginTop="@dimen/top_indentation_actors"
             android:fontFamily="@font/roboto_light"
             android:text="@string/mark_ruffalo"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="@dimen/tv_textSize_min"
             android:textStyle="bold"
-
             app:layout_constraintEnd_toEndOf="@+id/tvMark"
             app:layout_constraintStart_toStartOf="@+id/tvMark"
-            app:layout_constraintTop_toBottomOf="@+id/tvMark"  />
+            app:layout_constraintTop_toBottomOf="@+id/tvMark" />
 
         <TextView
             android:id="@+id/textChrisHemsworth"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginStart="@dimen/top_indentation_min"
+            android:layout_marginTop="@dimen/top_indentation_actors"
             android:fontFamily="@font/roboto_light"
             android:text="@string/chris_hemsworth"
             android:textColor="@color/white"
-            android:textSize="12sp"
+            android:textSize="@dimen/tv_textSize_min"
             android:textStyle="bold"
-
             app:layout_constraintEnd_toEndOf="@+id/tvHemsworth"
             app:layout_constraintStart_toStartOf="@+id/tvHemsworth"
-            app:layout_constraintTop_toBottomOf="@+id/tvHemsworth"  />
+            app:layout_constraintTop_toBottomOf="@+id/tvHemsworth" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginStart="@dimen/margin_back"
+            android:layout_marginTop="@dimen/top_indentation_back"
             android:src="@drawable/back"
             app:layout_constraintStart_toStartOf="@+id/guidelineStart"
             app:layout_constraintTop_toTopOf="@+id/tvMoviePoster" />
@@ -280,14 +270,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="16dp" />
+            app:layout_constraintGuide_begin="@dimen/my_value" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineEnd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="16dp" />
+            app:layout_constraintGuide_end="@dimen/my_value" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
