@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backgroundСolor">#191926</color>
+    <color name="background_color">#191926</color>
     <color name="titleColor">#ECECEC</color>
     <color name="genres">#FF3466</color>
     <color name="greyReviews">#6D6D80</color>
