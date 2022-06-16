@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_indentation_back">56dp</dimen>
+    <dimen name="top_indentation_castAndStoryline">24dp</dimen>
+    <dimen name="margin_back">18dp</dimen>
+    <dimen name="my_value">16dp</dimen>
+    <dimen name="top_indentation_min">10dp</dimen>
+    <dimen name="top_indentation_max">8dp</dimen>
+    <dimen name="top_indentation_actors">6dp</dimen>
+    <dimen name="zer0_width">0dp</dimen>
+    <dimen name="text_size_title">40sp</dimen>
+    <dimen name="tv_textSize_max">14sp</dimen>
+    <dimen name="tv_textSize_min">12sp</dimen>
+</resources>
