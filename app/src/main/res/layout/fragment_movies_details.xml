@@ -18,7 +18,8 @@
             android:scaleType="centerCrop"
             android:src="@drawable/orig"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/movie_poster_in_details" />
 
         <TextView
             android:id="@+id/tvMovieTitle"
@@ -64,7 +65,8 @@
             android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+            android:contentDescription="@string/first_star_in_details" />
 
         <ImageView
             android:id="@+id/tvSecondStar"
@@ -73,7 +75,8 @@
             android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@+id/tvFirstStar"
-            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+            android:contentDescription="@string/second_star_in_details" />
 
         <ImageView
             android:id="@+id/tvThirdStar"
@@ -82,7 +85,8 @@
             android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@+id/tvSecondStar"
-            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+            android:contentDescription="@string/third_star_in_details" />
 
         <ImageView
             android:id="@+id/tvFourStar"
@@ -91,7 +95,8 @@
             android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon"
             app:layout_constraintStart_toEndOf="@+id/tvThirdStar"
-            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+            android:contentDescription="@string/four_star_in_details" />
 
         <ImageView
             android:id="@+id/tvFiveStar"
@@ -100,7 +105,8 @@
             android:layout_marginTop="@dimen/top_indentation_min"
             android:src="@drawable/ic_star_icon_grey"
             app:layout_constraintStart_toEndOf="@+id/tvFourStar"
-            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+            android:contentDescription="@string/five_star_in_details" />
 
         <TextView
             android:id="@+id/tvReviews"
@@ -163,7 +169,8 @@
             android:src="@drawable/movie_3"
             app:layout_constraintEnd_toStartOf="@+id/tvChris"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
-            app:layout_constraintTop_toBottomOf="@+id/tvCast" />
+            app:layout_constraintTop_toBottomOf="@+id/tvCast"
+            android:contentDescription="@string/robert_downey_jr" />
 
         <ImageView
             android:id="@+id/tvChris"
@@ -174,7 +181,8 @@
             android:src="@drawable/movie_2"
             app:layout_constraintEnd_toStartOf="@+id/tvMark"
             app:layout_constraintStart_toEndOf="@+id/tvRobert"
-            app:layout_constraintTop_toBottomOf="@+id/tvCast" />
+            app:layout_constraintTop_toBottomOf="@+id/tvCast"
+            android:contentDescription="@string/chris_evans" />
 
         <ImageView
             android:id="@+id/tvMark"
@@ -185,7 +193,8 @@
             android:src="@drawable/movie_1"
             app:layout_constraintEnd_toStartOf="@+id/tvHemsworth"
             app:layout_constraintStart_toEndOf="@+id/tvChris"
-            app:layout_constraintTop_toBottomOf="@+id/tvCast" />
+            app:layout_constraintTop_toBottomOf="@+id/tvCast"
+            android:contentDescription="@string/mark_ruffalo" />
 
         <ImageView
             android:id="@+id/tvHemsworth"
@@ -196,7 +205,8 @@
             android:src="@drawable/movie_4"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toEndOf="@+id/tvMark"
-            app:layout_constraintTop_toBottomOf="@+id/tvCast" />
+            app:layout_constraintTop_toBottomOf="@+id/tvCast"
+            android:contentDescription="@string/chris_hemsworth" />
 
         <TextView
             android:id="@+id/textRobertDowney"
@@ -260,7 +270,8 @@
             android:layout_marginTop="@dimen/top_indentation_back"
             android:src="@drawable/back"
             app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-            app:layout_constraintTop_toTopOf="@+id/tvMoviePoster" />
+            app:layout_constraintTop_toTopOf="@+id/tvMoviePoster"
+            android:contentDescription="@string/back" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineStart"

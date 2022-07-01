@@ -11,19 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <ImageView
-            android:id="@+id/iv_icon_MoviesList"
+            android:id="@+id/ivMoviesList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/my_value"
             android:layout_marginTop="@dimen/top_indentation_back"
             android:src="@drawable/ic_movies_list_icon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/icon_movies_list" />
 
         <TextView
-            android:id="@+id/tv_MoviesList"
+            android:id="@+id/tvMoviesList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/my_value"
@@ -32,7 +32,7 @@
             android:text="@string/movies_list"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_max"
-            app:layout_constraintStart_toEndOf="@+id/iv_icon_MoviesList"
+            app:layout_constraintStart_toEndOf="@+id/ivMoviesList"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,25 +43,27 @@
             android:layout_marginTop="27dp"
             android:background="@drawable/background_picture"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_MoviesList">
+            app:layout_constraintTop_toBottomOf="@+id/tvMoviesList">
 
             <ImageView
-                android:id="@+id/movie_poster"
+                android:id="@+id/ivMoviePoster"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/movie_list"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/movie_poster" />
 
             <ImageView
-                android:id="@+id/iv_MoviePosterFade"
+                android:id="@+id/ivMoviePosterFade"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/movie_poster_fade"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/movie_poster_fade" />
 
             <TextView
                 android:id="@+id/tvMovieGenres"
@@ -73,8 +75,8 @@
                 android:text="@string/action_adventure_drama"
                 android:textColor="@color/genres"
                 android:textSize="8sp"
-                app:layout_constraintBottom_toBottomOf="@+id/movie_poster"
-                app:layout_constraintStart_toStartOf="@+id/movie_poster"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMoviePoster"
+                app:layout_constraintStart_toStartOf="@+id/ivMoviePoster"
                 tools:ignore="SmallSp" />
 
             <ImageView
@@ -84,8 +86,9 @@
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="4dp"
                 android:src="@drawable/ic_star_icon"
-                app:layout_constraintStart_toStartOf="@+id/movie_poster"
-                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+                app:layout_constraintStart_toStartOf="@+id/ivMoviePoster"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+                android:contentDescription="@string/first_star" />
 
             <ImageView
                 android:id="@+id/tvSecondStar"
@@ -94,7 +97,8 @@
                 android:layout_marginTop="4dp"
                 android:src="@drawable/ic_star_icon"
                 app:layout_constraintStart_toEndOf="@+id/tvFirstStar"
-                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+                android:contentDescription="@string/second_star" />
 
             <ImageView
                 android:id="@+id/tvThirdStar"
@@ -103,7 +107,8 @@
                 android:layout_marginTop="4dp"
                 android:src="@drawable/ic_star_icon"
                 app:layout_constraintStart_toEndOf="@+id/tvSecondStar"
-                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+                android:contentDescription="@string/third_star" />
 
             <ImageView
                 android:id="@+id/tvFourStar"
@@ -112,7 +117,8 @@
                 android:layout_marginTop="4dp"
                 android:src="@drawable/ic_star_icon"
                 app:layout_constraintStart_toEndOf="@+id/tvThirdStar"
-                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+                android:contentDescription="@string/four_star" />
 
             <TextView
                 android:id="@+id/tvReviews"
@@ -128,7 +134,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
                 tools:ignore="SmallSp" />
 
-
             <ImageView
                 android:id="@+id/tvFiveStar"
                 android:layout_width="8dp"
@@ -136,7 +141,8 @@
                 android:layout_marginTop="4dp"
                 android:src="@drawable/ic_star_icon_grey"
                 app:layout_constraintStart_toEndOf="@+id/tvFourStar"
-                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres"
+                android:contentDescription="@string/five_star" />
 
             <ImageView
                 android:id="@+id/ivLike"
@@ -146,7 +152,8 @@
                 android:layout_marginEnd="8dp"
                 android:src="@drawable/ic_like"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/icon_like" />
 
             <TextView
                 android:id="@+id/ivAge"
@@ -154,7 +161,7 @@
                 android:layout_height="24dp"
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/iv_background_for_age"
+                android:background="@drawable/ic_background_for_age"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -207,7 +214,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvTitleName"
                 tools:ignore="SmallSp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
