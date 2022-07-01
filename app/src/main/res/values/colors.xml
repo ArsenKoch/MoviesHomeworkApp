@@ -11,4 +11,5 @@
     <color name="titleColor">#ECECEC</color>
     <color name="genres">#FF3466</color>
     <color name="greyReviews">#6D6D80</color>
+    <color name="grey_for_time">#565665</color>
 </resources>

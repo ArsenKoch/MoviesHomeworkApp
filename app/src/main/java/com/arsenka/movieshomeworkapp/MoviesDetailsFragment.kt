@@ -17,9 +17,14 @@ class MoviesDetailsFragment : Fragment(R.layout.fragment_movies_details) {
         binding = FragmentMoviesDetailsBinding.bind(view)
 
         binding?.ivBack?.setOnClickListener {
-          findNavController().popBackStack()
+            findNavController().popBackStack()
 
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }
 
