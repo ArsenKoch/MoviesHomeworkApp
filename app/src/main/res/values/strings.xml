@@ -17,4 +17,19 @@
     <string name="avengers_end_game_list">Avengers: End Game</string>
     <string name="_137_min">137 min</string>
     <string name="action_adventure_drama">Action, Adventure, Drama</string>
+    <string name="icon_like">icon like</string>
+    <string name="five_star">five star</string>
+    <string name="four_star">four star</string>
+    <string name="icon_movies_list">icon movies list</string>
+    <string name="first_star">first star</string>
+    <string name="second_star">second star</string>
+    <string name="third_star">third star</string>
+    <string name="movie_poster">movie poster</string>
+    <string name="movie_poster_fade">movie poster fade</string>
+    <string name="movie_poster_in_details">movie poster in details</string>
+    <string name="first_star_in_details">first star in details</string>
+    <string name="second_star_in_details">second star in details</string>
+    <string name="third_star_in_details">third star in details</string>
+    <string name="four_star_in_details">four star in details</string>
+    <string name="five_star_in_details">five star in details</string>
 </resources>
