@@ -15,12 +15,15 @@ class MoviesListFragment : Fragment(R.layout.fragment_movies_list) {
         binding = FragmentMoviesListBinding.bind(view)
 
         binding?.movieContainer?.setOnClickListener {
-            openMovie()
-
+            findNavController().navigate(R.id.action_fragmentMoviesList_to_fragmentMoviesDetails)
         }
     }
 
-    private fun openMovie() {
-        findNavController().navigate(R.id.action_fragmentMoviesList_to_fragmentMoviesDetails)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }
+
+
+

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/background_color"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context="MoviesDetailsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/tvMoviePoster"
@@ -23,21 +22,22 @@
 
         <TextView
             android:id="@+id/tvMovieTitle"
-            android:layout_width="@dimen/zer0_width"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/my_value"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/avengers_end_game"
             android:textColor="@color/titleColor"
             android:textSize="@dimen/text_size_title"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@+id/tvMoviePoster" />
 
         <TextView
             android:id="@+id/tvMovieGenres"
-            android:layout_width="@dimen/zer0_width"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
             android:text="@string/action_adventure_fantasy"
             android:textColor="@color/genres"
             android:textSize="@dimen/tv_textSize_max"
@@ -50,6 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/top_indentation_min"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/_13"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_min"
@@ -107,10 +108,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/tv_textSize_min"
             android:layout_marginTop="@dimen/top_indentation_actors"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/_125_reviews"
             android:textColor="@color/greyReviews"
             android:textSize="@dimen/tv_textSize_max"
-            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/tvFiveStar"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieGenres" />
 
@@ -120,10 +121,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/my_value"
             android:layout_marginTop="@dimen/top_indentation_castAndStoryline"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/storyline"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_max"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvReviews" />
 
@@ -145,10 +146,10 @@
             android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/top_indentation_castAndStoryline"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/cast"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_max"
-            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
             app:layout_constraintStart_toStartOf="@id/guidelineStart"
             app:layout_constraintTop_toBottomOf="@+id/tvMovieDescription" />
@@ -201,11 +202,10 @@
             android:id="@+id/textRobertDowney"
             android:layout_width="@dimen/zer0_width"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/robert_downey_jr"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_min"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tvRobert"
             app:layout_constraintStart_toStartOf="@id/tvRobert"
             app:layout_constraintTop_toBottomOf="@+id/tvRobert" />
@@ -216,11 +216,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/top_indentation_min"
             android:layout_marginTop="@dimen/top_indentation_actors"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/chris_evans"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_min"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tvChris"
             app:layout_constraintStart_toStartOf="@+id/tvChris"
             app:layout_constraintTop_toBottomOf="@+id/tvChris" />
@@ -231,11 +230,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/top_indentation_min"
             android:layout_marginTop="@dimen/top_indentation_actors"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/mark_ruffalo"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_min"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tvMark"
             app:layout_constraintStart_toStartOf="@+id/tvMark"
             app:layout_constraintTop_toBottomOf="@+id/tvMark" />
@@ -246,11 +244,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/top_indentation_min"
             android:layout_marginTop="@dimen/top_indentation_actors"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/chris_hemsworth"
             android:textColor="@color/white"
             android:textSize="@dimen/tv_textSize_min"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tvHemsworth"
             app:layout_constraintStart_toStartOf="@+id/tvHemsworth"
             app:layout_constraintTop_toBottomOf="@+id/tvHemsworth" />
