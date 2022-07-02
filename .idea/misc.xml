@@ -4,15 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/drawable/ic_like.xml" value="0.325" />
-        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/drawable/ic_movies_list_icon.xml" value="0.334" />
         <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/drawable/ic_path.xml" value="0.27" />
-        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/drawable/ic_rectangle.xml" value="0.334" />
         <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/drawable/ic_star_icon.xml" value="0.27" />
         <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/layout/activity_main.xml" value="0.37962962962962965" />
         <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/layout/fragment_movies_details.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/layout/fragment_movies_list.xml" value="0.5764596848934198" />
+        <entry key="..\:/Users/fapah/AndroidStudioProjects/MoviesHomeworkApp/app/src/main/res/layout/fragment_movies_list.xml" value="1.0" />
+        <entry key="app/src/main/res/drawable/ic_like.xml" value="0.265" />
         <entry key="app/src/main/res/drawable/ic_star_icon.xml" value="0.1435" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_movies_details.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_movies_list.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/view_holder_movie.xml" value="0.375" />
       </map>
     </option>
   </component>
