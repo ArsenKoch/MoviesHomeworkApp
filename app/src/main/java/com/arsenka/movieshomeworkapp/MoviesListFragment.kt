@@ -15,28 +15,58 @@ class MoviesListFragment : Fragment(R.layout.fragment_movies_list) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMoviesListBinding.bind(view)
 
-        // TODO: скачать и добавить другие постеров длоя фильмов.Установить мувилистфрагменте правильные картинки
-        // отобразить другой (имена и картинки) список актеров на экране детали фильма.
-
-
         binding?.rvMovies?.layoutManager = GridLayoutManager(context, 2)
-        val adapter =  MoviesListAdapter(
+        val adapter = MoviesListAdapter(
             listOf(
-                MoviesListItem("Avengers : End Game", "13+","Action, Adventure, Drama","125 REVIEWS","137 MIN",false,R.drawable.movie_list,4),
-                MoviesListItem("Tenet", "16+","Action, Sci-Fi, Thriller","98 REVIEWS","97 MIN",true,R.drawable.movie_list,5),
-                MoviesListItem("Black Widow", "13+","Action, Sci-Fi, Thriller","38 REVIEWS","102 MIN",false,R.drawable.movie_list,4),
-                MoviesListItem("Wonder Woman 1984", "13+","Action, Adventure, Fantasy","74 REVIEWS","120 MIN",false,R.drawable.movie_list,5)
+                MoviesListItem(
+                    "Avengers : End Game",
+                    "13+",
+                    "Action, Adventure, Drama",
+                    "125 REVIEWS",
+                    "137 MIN",
+                    false,
+                    R.drawable.movie_list,
+                    4
+                ),
+                MoviesListItem(
+                    "Tenet",
+                    "16+",
+                    "Action, Sci-Fi, Thriller",
+                    "98 REVIEWS",
+                    "97 MIN",
+                    true,
+                    R.drawable.movie_tenet,
+                    5
+                ),
+                MoviesListItem(
+                    "Black Widow",
+                    "13+",
+                    "Action, Sci-Fi, Thriller",
+                    "38 REVIEWS",
+                    "102 MIN",
+                    false,
+                    R.drawable.movie_blwidow,
+                    4
+                ),
+                MoviesListItem(
+                    "Wonder Woman 1984",
+                    "13+",
+                    "Action, Adventure, Fantasy",
+                    "74 REVIEWS",
+                    "120 MIN",
+                    false,
+                    R.drawable.movie_ww84,
+                    5
+                )
             )
         )
-        adapter.setOnClickListener(object : MoviesListAdapter.onItemClickListener{
+        adapter.setOnClickListener(object : MoviesListAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 findNavController().navigate(R.id.action_fragmentMoviesList_to_fragmentMoviesDetails)
 
             }
         })
         binding?.rvMovies?.adapter = adapter
-
-
     }
 
     override fun onDestroyView() {
@@ -44,5 +74,3 @@ class MoviesListFragment : Fragment(R.layout.fragment_movies_list) {
         binding = null
     }
 }
-
-

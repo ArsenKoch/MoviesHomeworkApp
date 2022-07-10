@@ -9,22 +9,20 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.IntRange
 import androidx.recyclerview.widget.RecyclerView
 
-
 class MoviesListAdapter(private val list: List<MoviesListItem>) :
     RecyclerView.Adapter<MoviesListAdapter.MoviesListViewHolder>() {
-    private lateinit var Listener : onItemClickListener
+    private lateinit var listener: OnItemClickListener
 
-    interface onItemClickListener{
+    interface OnItemClickListener {
         fun onItemClick(position: Int)
-
-
     }
 
-    fun setOnClickListener(listener : onItemClickListener) {Listener = listener}
+    fun setOnClickListener(listener: OnItemClickListener) {
+        this.listener = listener
+    }
 
-
-
-    class MoviesListViewHolder(itemView: View,listener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
+    class MoviesListViewHolder(itemView: View, listener: OnItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
         val tvTitleName: TextView = itemView.findViewById(R.id.tvTitleName)
         val tvAge: TextView = itemView.findViewById(R.id.tvAge)
         val tvMovieGenres: TextView = itemView.findViewById(R.id.tvMovieGenres)
@@ -39,12 +37,9 @@ class MoviesListAdapter(private val list: List<MoviesListItem>) :
         val fiveStar: ImageView = itemView.findViewById(R.id.tvFiveStar)
 
         init {
-
-            itemView.setOnClickListener{
-            listener.onItemClick(adapterPosition)
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
             }
-
-
         }
     }
 
@@ -52,7 +47,7 @@ class MoviesListAdapter(private val list: List<MoviesListItem>) :
         val itemView =
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.view_holder_movie, parent, false)
-        return MoviesListViewHolder(itemView,Listener)
+        return MoviesListViewHolder(itemView, listener)
     }
 
     override fun onBindViewHolder(holder: MoviesListViewHolder, position: Int) {
@@ -61,40 +56,47 @@ class MoviesListAdapter(private val list: List<MoviesListItem>) :
         holder.tvMovieGenres.text = list[position].genres
         holder.tvReviews.text = list[position].reviews
         holder.tvDurationFilm.text = list[position].time
-        if (list[position].ivFavourite) {
+        if (list[position].ivFavourite)
             holder.ivFavourite.setImageResource(R.drawable.ic_favourite_pink)
-        } else holder.ivFavourite.setImageResource(R.drawable.ic_favourite_grey)
+        else
+            holder.ivFavourite.setImageResource(R.drawable.ic_favourite_grey)
         holder.ivPoster.setImageResource(list[position].ivPoster)
-        if (list[position].rating == 1) {
-            holder.firstStar.setImageResource(R.drawable.ic_star_icon)
-            holder.secondStar.setImageResource(R.drawable.ic_star_icon_grey)
-            holder.thirdStar.setImageResource(R.drawable.ic_star_icon_grey)
-            holder.fourStar.setImageResource(R.drawable.ic_star_icon_grey)
-            holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
-        } else if (list[position].rating == 2) {
-            holder.firstStar.setImageResource(R.drawable.ic_star_icon)
-            holder.secondStar.setImageResource(R.drawable.ic_star_icon)
-            holder.thirdStar.setImageResource(R.drawable.ic_star_icon_grey)
-            holder.fourStar.setImageResource(R.drawable.ic_star_icon_grey)
-            holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
-        } else if (list[position].rating == 3) {
-            holder.firstStar.setImageResource(R.drawable.ic_star_icon)
-            holder.secondStar.setImageResource(R.drawable.ic_star_icon)
-            holder.thirdStar.setImageResource(R.drawable.ic_star_icon)
-            holder.fourStar.setImageResource(R.drawable.ic_star_icon_grey)
-            holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
-        } else if (list[position].rating == 4) {
-            holder.firstStar.setImageResource(R.drawable.ic_star_icon)
-            holder.secondStar.setImageResource(R.drawable.ic_star_icon)
-            holder.thirdStar.setImageResource(R.drawable.ic_star_icon)
-            holder.fourStar.setImageResource(R.drawable.ic_star_icon)
-            holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
-        } else if (list[position].rating == 5) {
-            holder.firstStar.setImageResource(R.drawable.ic_star_icon)
-            holder.secondStar.setImageResource(R.drawable.ic_star_icon)
-            holder.thirdStar.setImageResource(R.drawable.ic_star_icon)
-            holder.fourStar.setImageResource(R.drawable.ic_star_icon)
-            holder.fiveStar.setImageResource(R.drawable.ic_star_icon)
+        when (list[position].rating) {
+            1 -> {
+                holder.firstStar.setImageResource(R.drawable.ic_star_icon)
+                holder.secondStar.setImageResource(R.drawable.ic_star_icon_grey)
+                holder.thirdStar.setImageResource(R.drawable.ic_star_icon_grey)
+                holder.fourStar.setImageResource(R.drawable.ic_star_icon_grey)
+                holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
+            }
+            2 -> {
+                holder.firstStar.setImageResource(R.drawable.ic_star_icon)
+                holder.secondStar.setImageResource(R.drawable.ic_star_icon)
+                holder.thirdStar.setImageResource(R.drawable.ic_star_icon_grey)
+                holder.fourStar.setImageResource(R.drawable.ic_star_icon_grey)
+                holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
+            }
+            3 -> {
+                holder.firstStar.setImageResource(R.drawable.ic_star_icon)
+                holder.secondStar.setImageResource(R.drawable.ic_star_icon)
+                holder.thirdStar.setImageResource(R.drawable.ic_star_icon)
+                holder.fourStar.setImageResource(R.drawable.ic_star_icon_grey)
+                holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
+            }
+            4 -> {
+                holder.firstStar.setImageResource(R.drawable.ic_star_icon)
+                holder.secondStar.setImageResource(R.drawable.ic_star_icon)
+                holder.thirdStar.setImageResource(R.drawable.ic_star_icon)
+                holder.fourStar.setImageResource(R.drawable.ic_star_icon)
+                holder.fiveStar.setImageResource(R.drawable.ic_star_icon_grey)
+            }
+            5 -> {
+                holder.firstStar.setImageResource(R.drawable.ic_star_icon)
+                holder.secondStar.setImageResource(R.drawable.ic_star_icon)
+                holder.thirdStar.setImageResource(R.drawable.ic_star_icon)
+                holder.fourStar.setImageResource(R.drawable.ic_star_icon)
+                holder.fiveStar.setImageResource(R.drawable.ic_star_icon)
+            }
         }
     }
 
