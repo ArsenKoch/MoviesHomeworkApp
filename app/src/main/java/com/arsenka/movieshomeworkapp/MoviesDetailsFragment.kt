@@ -15,8 +15,16 @@ class MoviesDetailsFragment : Fragment(R.layout.fragment_movies_details) {
 
         binding?.ivBack?.setOnClickListener {
             findNavController().popBackStack()
-
         }
+        val adapter = ActorsAdapter(
+            listOf(
+                ActorsListItem("Robert Downey Jr.",R.drawable.movie_3),
+                ActorsListItem("Chris Evans",R.drawable.movie_2),
+                ActorsListItem("Mark Ruffalo",R.drawable.movie_1),
+                ActorsListItem("Chris Hemsworth",R.drawable.movie_4)
+            )
+        )
+        binding?.rvCast?.adapter = adapter
     }
 
     override fun onDestroyView() {
