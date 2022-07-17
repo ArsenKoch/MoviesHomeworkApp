@@ -1,20 +1,26 @@
 package com.arsenka.movieshomeworkapp
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.annotation.DrawableRes
 import androidx.annotation.IntRange
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class MoviesListAdapter(private val list: List<MoviesListItem>) :
+class MoviesListAdapter(private val context: Context) :
     RecyclerView.Adapter<MoviesListAdapter.MoviesListViewHolder>() {
     private lateinit var listener: OnItemClickListener
+    private var list: List<MoviesListItem> = emptyList()
 
     interface OnItemClickListener {
         fun onItemClick(position: Int)
+    }
+
+    fun addData(list: List<MoviesListItem>) {
+        this.list = list
     }
 
     fun setOnClickListener(listener: OnItemClickListener) {
@@ -56,11 +62,17 @@ class MoviesListAdapter(private val list: List<MoviesListItem>) :
         holder.tvMovieGenres.text = list[position].genres
         holder.tvReviews.text = list[position].reviews
         holder.tvDurationFilm.text = list[position].time
+
         if (list[position].ivFavourite)
             holder.ivFavourite.setImageResource(R.drawable.ic_favourite_pink)
         else
             holder.ivFavourite.setImageResource(R.drawable.ic_favourite_grey)
-        holder.ivPoster.setImageResource(list[position].ivPoster)
+
+
+        Glide.with(context)
+            .load(list[position].ivPoster)
+            .into(holder.ivPoster)
+
         when (list[position].rating) {
             1 -> {
                 holder.firstStar.setImageResource(R.drawable.ic_star_icon)
@@ -110,7 +122,7 @@ data class MoviesListItem(
     val reviews: String,
     val time: String,
     val ivFavourite: Boolean,
-    @DrawableRes val ivPoster: Int,
+    val ivPoster: String,
     @IntRange(from = 0, to = 5) val rating: Int
 )
 
